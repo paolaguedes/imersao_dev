@@ -1,5 +1,9 @@
-function Converter() {
 
+const valida = document.querySelector('.formButton');
+valida.addEventListener('click', Converter)
+
+function Converter(evento) {
+    evento.preventDefault()
     var valorElemento = document.getElementById("valor")
     var valor = valorElemento.value
     var valorDolar = parseFloat(valor)
