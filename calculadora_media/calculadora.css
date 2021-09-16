@@ -1,0 +1,74 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(255, 204, 204);
+    background-image: url(fundo.png);
+    background-repeat: no-repeat;
+    background-position: 20% 70%;
+    background-size: 20rem;
+}
+
+section {
+    color:rgb(255, 65, 65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section h1 {
+    padding: 3rem 0 1rem;
+    font-size: 3rem;
+}
+
+section p {
+    padding: 0 0 1rem;  
+}
+
+section img {
+    width: 10rem;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 65, 65);
+    border-radius: 18px;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+}
+
+section div input {
+    height: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgb(255, 65, 65);
+    padding-left: 10px;
+    background-color: white;
+}
+
+section div input:focus {
+    outline: 0;
+}
+
+section div button {
+    height: 2rem;
+    font-size: 1.3rem;
+    background-color: rgb(253,218,126);
+    color: rgb(255, 65, 65);
+    border: 1px solid rgb(255, 65, 65);
+    margin-bottom: 2rem;
+}
+
+section div button:hover {
+    background-color: rgba(253,218,126,0.5);
+    cursor: pointer;
+}
+
+section:last-child {
+    color: white;
+    font-size: 2rem;
+}
