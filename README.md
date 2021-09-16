@@ -33,22 +33,12 @@ Com o html feito, partimos para o arquivo .js. Nele criamos nossa function Calcu
 
 function Calcular() {
 
-// aqui estamos buscando no código HTML o componente que possui o id especificado -->
+//pegando o valor do que foi digitado nos inputs com determinados ids
 
+var nome = document.getElementById("nome").value
+var notaUm = document.getElementById("nota1").value
+var notaDois = document.getElementById("nota2").value
 
-var nome = document.getElementById("nome")
-var notaUm = document.getElementById("nota1")
-var notaDois = document.getElementById("nota2")
-
-// só que ao fazer isso estamos puxando/pegando do nosso HTML TODO o componente visual, ou seja,
-//se você der um console.log(nome),por exemplo, no console você verá o campo todo do input e não 
-//é isso que nós queremos,queremos o valor que foi digitado pelo usuário, então 
-
-...
-var nota2 = notaDois.value
-
-//ao fazer isso, criamos uma nova variável com o nome do nosso id (mas pode ser qualquer nome, claro)
-//entao vamos acessar o conteúdo (.) do input e pegar apenas seu valor
 
 nota2 = parseFloat(nota2)
 
