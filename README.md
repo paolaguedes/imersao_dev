@@ -34,15 +34,13 @@ Com o html feito, partimos para o arquivo .js. Nele criamos nossa function Calcu
 function Calcular() {
 
 //pegando o valor do que foi digitado nos inputs com determinados ids
+//e alterando do tipo string (que é o padrao do js) para tipo float
 
 var nome = document.getElementById("nome").value
-var notaUm = document.getElementById("nota1").value
-var notaDois = document.getElementById("nota2").value
+var notaUm = parseFloat(document.getElementById("nota1").value)
+var notaDois = parseFloat(document.getElementById("nota2").value)
 
 
-nota2 = parseFloat(nota2)
-
-// altera do tipo string (que é o padrao do js) para tipo float
 
 // Agora para apresentar na tela, nossa variavel resultadoFinal vai pegar o componente do html que tem o id resultado,
 // e vamos criar uma variavel resultado para conter o nosso texto com as informações de nota
