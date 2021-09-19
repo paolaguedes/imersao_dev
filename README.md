@@ -64,3 +64,49 @@ else {...}
 ...
 
 ```
+# Aluraflix
+
+Nesse projeto fomos mais a fundo na estruturação do código javascript, por quebrar nosso código em duas funções diferentes. Nosso objetivo era adicionar posters de anime/filme/série, aplicando a lógica de iterações, pela url.
+
+<br>
+
+
+Nessa parte do nosso código criamos uma tag img atribuindo ela a uma variável, e 
+puxamos do html nossa div/section pelo seu id
+Após, somamos cada entrada com a que já havia sido incluída anteriormente
+
+```js
+
+...
+
+function listarAnimes(anime) {
+    var elementoAnimeFavorito = "<img src=" + anime + ">"
+    var listAnime = document.getElementById("listaAnime")
+    //soma os filmes adicionados
+    listAnime.innerHTML =   listAnime.innerHTML + elementoAnimeFavorito
+}
+
+
+```
+
+E, na nossa função principal, que é chamada pelo onclick no button do html chamamos a função listarAnimes... e ficou assim:
+
+```js
+
+function adicionarAnime() {
+    //pegar o valor digitado no input
+    var animeFavorito = document.getElementById("anime").value
+    //validando a entrada da url
+    if(animeFavorito.endsWith(".jpg")){
+       listarAnimes(animeFavorito) //chama a funçao listarAnimes e passa como parametro a variavel animeFavorito
+    } else {
+        console.error("endereço de filme inválido")
+    }
+    //limpa o input toda vez que uma url é adicionada
+    document.getElementById("anime").value = " "
+}
+...
+
+```
+
+Para validar a entrada de urls usamos a estrutura de condição if com o método .endsWith, que é literalmente "termina com", e se nossa url terminasse com .jpg que é o padrão de imagem, ela seria incluída no escopo do nosso html, senão apresentaria um erro pelo console.error.
